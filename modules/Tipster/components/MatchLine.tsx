@@ -1,5 +1,4 @@
 import { Input } from "@/components/Primitives/Input";
-import { Minus } from "lucide-react";
 import { FunctionComponent } from "react";
 
 export const MatchLine: FunctionComponent = () => {

@@ -5,7 +5,7 @@ export const SaveButton: FunctionComponent = () => {
   return (
     <>
       <div className="flex justify-center hover:delay-300 cursor-pointer my-2">
-        <H2 className="w-48 bg-primary-500 font-bold p-2 rounded-xl">
+        <H2 className="w-48 bg-primary-500 font-bold p-2 rounded-xl hover:bg-primary-400">
           Zapisz moje typy
         </H2>
       </div>

@@ -2,11 +2,11 @@ import { Hero } from "@/modules/Hero";
 
 import { FunctionComponent } from "react";
 
-const Results: FunctionComponent = () => (
+const ResultsPage: FunctionComponent = () => (
   <>
     <Hero />
     <div>Wyniki</div>
   </>
 );
 
-export default Results;
+export default ResultsPage;

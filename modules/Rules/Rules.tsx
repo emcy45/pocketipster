@@ -19,7 +19,7 @@ export const Rules: FunctionComponent = () => {
 
       <div className="flex flex-col justify-center">
         <button
-          className="flex items-center justify-center text-secondary-500  focus:outline-none font-medium"
+          className="flex items-center justify-center text-secondary-700 hover:text-secondary-500  focus:outline-none font-medium"
           onClick={handleToggle}
         >
           <span className="mr-2">
