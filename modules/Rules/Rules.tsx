@@ -58,9 +58,9 @@ export const Rules: FunctionComponent = () => {
               <List>W fazie pucharowej typujemy wynik do 90 minuty.</List>
               <Paragraph className="italic">
                 Przykład: Szkocja wygrała z Niemcami 5-0. Za wytypowanie
-                dokładnego wyniku, gracz dostaje 3 punkty, za wytypowanie wyniku
-                np. 2-1 dla Szkocji, zawodnik dostaje 1pkt. Za ustawienie remisu
-                lub porażki Szkotów, zawodnik nie dostaje punktów.
+                dokładnego wyniku, gracz dostaje 3 pkt, za wytypowanie wyniku
+                np. 2-1 dla Szkocji, zawodnik dostaje 1 pkt. Za ustawienie
+                remisu lub porażki Szkotów, zawodnik nie dostaje punktów.
               </Paragraph>
             </>
           )}

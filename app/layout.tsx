@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/utils/styles";
+import { Footer } from "@/components/Footer/Footer";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
       )}
     >
       <body className="h-full w-full">
-        <main className="h-full mx-4 lg:mx-16 xl:mx-64">{children}</main>
+        <main className="h-full mx-2 lg:mx-16 xl:mx-64">{children}</main>
       </body>
     </html>
   );

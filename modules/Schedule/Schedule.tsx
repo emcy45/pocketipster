@@ -1,31 +1,15 @@
-// plik do edycji: będzie inna baza danych
-
-import supabase from "@/api/supabaseClient";
 import { H1, H2, H3 } from "@/components/Primitives/Headings";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { FunctionComponent, useEffect, useState } from "react";
 
-interface Meeting {
-  date: string;
-  time: string;
-  home: string;
-  away: string;
-}
-
-const getMeetings = async () => {
-  const { data, error } = await supabase.from("schedule").select();
-
-  if (error) {
-    console.error("Error fetching meetings:", error.message);
-    throw new Error("Error fetching meetings");
-  }
-  return data as Meeting[];
-};
+// interface Meeting {
+//   date: string;
+//   time: string;
+//   home: string;
+//   away: string;
+// }
 
 export const Schedule: FunctionComponent = async () => {
-  const data = await getMeetings();
-  console.log("test");
-  console.log(data);
   return (
     <div className=" justify-center p-4  my-4 lg:mb-6">
       <H1>Terminarz:</H1>
@@ -35,23 +19,21 @@ export const Schedule: FunctionComponent = async () => {
         <ArrowRight className="hover:text-primary-400" />
       </div>
 
-      {data?.map((meeting, index) => (
-        <div key={index} className="flex items-center mx-2 lg:mx-8">
-          <div className="flex flex-col md:flex-row md:gap-8 md:justify-end items-center basis-1/3 italic">
-            <div>{meeting.date}</div>
-            <div>{meeting.time}</div>
+      <div className="flex items-center mx-2 lg:mx-8">
+        <div className="flex flex-col md:flex-row md:gap-8 md:justify-end items-center basis-1/3 italic">
+          <div>Data</div>
+          <div>Godzina</div>
+        </div>
+        <div className="flex basis-2/3 justify-between md:justify-center ml-4">
+          <div className="flex basis-1/3 justify-center  text-center items-center">
+            Home
           </div>
-          <div className="flex basis-2/3 justify-between md:justify-center ml-4">
-            <div className="flex basis-1/3 justify-center  text-center items-center">
-              {meeting.home}
-            </div>
-            -
-            <div className="flex basis-1/3 justify-center  text-center items-center">
-              {meeting.away}
-            </div>
+          -
+          <div className="flex basis-1/3 justify-center  text-center items-center">
+            Away
           </div>
         </div>
-      ))}
+      </div>
     </div>
   );
 };
